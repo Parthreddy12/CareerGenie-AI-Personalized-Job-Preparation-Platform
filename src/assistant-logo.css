@@ -1,0 +1,61 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        .ai-face {
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
+            background: #007bff;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            animation: float 2s ease-in-out infinite;
+
+        }
+
+        .eye {
+            width: 55px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: blink 2s infinite;
+            transition: transform 0.15s ease;
+            
+
+        }
+
+        /* Floating animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Blinking */
+        @keyframes blink {
+
+            0%,
+            45%,
+            50%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            47% {
+                transform: scaleY(0.08);
+            }
+        }

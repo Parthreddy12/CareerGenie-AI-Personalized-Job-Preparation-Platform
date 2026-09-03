@@ -4,6 +4,7 @@
 
         .ai-face {
             margin-top: 50px;
+            margin-left: calc(50% - 100px);
             width: 200px;
             height: 200px;
             background: #007bff;

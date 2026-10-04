@@ -23,6 +23,7 @@ body {
         #000000;
 }
 
+
 /* NAVBAR */
 
 nav {
@@ -152,6 +153,8 @@ nav {
     font-size: 60px;
 
     margin-bottom: 20px;
+
+    margin-left: 20px;
 
 }
 
@@ -291,6 +294,8 @@ nav {
 
     transition: .4s;
 
+    text-decoration: none;
+
 }
 
 .card:hover {
@@ -314,6 +319,11 @@ nav {
 
     filter: drop-shadow(0 0 10px rgb(0, 81, 255));
 
+}
+
+.features-cards a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .card:hover i {

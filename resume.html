@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerGenie AI - Resume Analysis</title>
+    <link rel="stylesheet" href="src/resume.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🤖 Career<span>Genie</span> AI
+        </div>
+
+
+    </header>
+
+
+    <div class="layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+            <a href="home.html">
+            <div class="menu">
+                🏠 &nbsp; Home
+            </div>
+        </a>
+
+            <div class="menu active">
+                📄 &nbsp; Resume Analysis
+            </div>
+
+            <div class="menu dropdown-menu" onclick="toggleJobPreparation()">
+
+                <span>
+                    💼 &nbsp; Job Preparation
+                </span>
+
+                <span class="arrow" id="jobArrow">▾</span>
+
+            </div>
+
+
+            <!-- SUB MENU -->
+
+            <div class="submenu" id="jobSubmenu">
+
+                <div class="submenu-item">
+                    🎓 &nbsp; Aptitude Test
+                </div>
+
+                <div class="submenu-item">
+                    💻 &nbsp; Coding Test
+                </div>
+
+                <div class="submenu-item">
+                    🎤 &nbsp; AI Interview
+                </div>
+
+            </div>
+
+
+            <div class="menu">
+                📊 &nbsp; Progress Dashboard
+            </div>
+
+            <div class="menu">
+                ⚙️ &nbsp; Settings
+            </div>
+
+        </aside>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <main class="content">
+
+            <!-- HEADER -->
+
+            <section class="analysis-header">
+
+                <div>
+                    <h1>Resume Analysis</h1>
+
+                    <p>
+                        Upload your resume and get instant ATS score,
+                        insights and AI-powered improvement suggestions.
+                    </p>
+                </div>
+
+
+            </section>
+
+
+            <div class="main-grid">
+
+                <!-- ================= LEFT ================= -->
+
+                <div>
+
+                    <!-- UPLOAD -->
+
+                    <div class="upload-card">
+
+                        <div class="upload-box">
+
+                            <div class="upload-icon">
+                                ☁️
+                            </div>
+
+                            <h2>Upload Your Resume</h2>
+
+                            <p>
+                                Drag and drop your file here or click to browse
+                            </p>
+
+                            <label for="resumeFile" class="choose-btn">
+                                ☁ Choose File
+                            </label>
+
+                            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx">
+
+                            <div class="file-name" id="fileName">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROCESS -->
+
+                    <div class="process">
+
+                        <div class="step">
+
+                            <div class="step-number">1</div>
+
+                            <h4>Upload Resume</h4>
+
+                            <p>
+                                Submit your resume in PDF or DOCX format.
+                            </p>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <div class="step-number">2</div>
+
+                            <h4>Get ATS Score</h4>
+
+                            <p>
+                                Know how well your resume matches ATS.
+                            </p>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <div class="step-number">3</div>
+
+                            <h4>View Insights</h4>
+
+                            <p>
+                                See strengths, weaknesses and gaps.
+                            </p>
+
+                        </div>
+
+
+                        <div class="step">
+
+                            <div class="step-number">4</div>
+
+                            <h4>Get Suggestions</h4>
+
+                            <p>
+                                Improve your resume with AI-powered tips.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= RIGHT ================= -->
+
+                <div>
+
+                    <!-- ATS SCORE -->
+
+                    <div class="ats-card">
+
+                        <h3 class="card-title">
+                            📊 Your Analysis Result
+                        </h3>
+
+                        <div class="score-circle">
+
+                            <div class="score-inner">
+
+                                <div class="score">
+                                    78
+                                </div>
+
+                                <div class="score-label">
+                                    ATS Score
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="score-item">
+                            <span>Resume Format</span>
+                            <b>85%</b>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:85%"></div>
+                        </div>
+
+
+                        <div class="score-item">
+                            <span>Keywords</span>
+                            <b>72%</b>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:72%"></div>
+                        </div>
+
+
+                        <div class="score-item">
+                            <span>Skills Match</span>
+                            <b>80%</b>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:80%"></div>
+                        </div>
+
+
+                        <div class="score-item">
+                            <span>Experience</span>
+                            <b>75%</b>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:75%"></div>
+                        </div>
+
+
+                        <div class="score-item">
+                            <span>Education</span>
+                            <b>90%</b>
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:90%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- INSIGHTS -->
+
+
+                    <button class="details-btn" onclick="viewAnalysis()">
+                        View Detailed Analysis →
+                    </button>
+
+                </div>
+
+            </div>
+
+    </div>
+
+    </main>
+
+    </div>
+
+
+    <script>
+
+        /* Resume file selection */
+
+        const resumeFile =
+            document.getElementById("resumeFile");
+
+        const fileName =
+            document.getElementById("fileName");
+
+
+        resumeFile.addEventListener("change", function () {
+
+            if (this.files.length > 0) {
+
+                fileName.innerHTML =
+                    "Selected: " + this.files[0].name;
+
+            }
+
+        });
+
+
+        /* Sample resume */
+
+        function useSample() {
+
+            fileName.innerHTML =
+                "Sample_Resume.pdf selected";
+
+        }
+
+
+        /* Detailed analysis */
+
+        function viewAnalysis() {
+
+            alert(
+                "Detailed Resume Analysis will open here."
+            );
+
+        }
+        function toggleJobPreparation() {
+
+            const submenu =
+                document.getElementById("jobSubmenu");
+
+            const arrow =
+                document.getElementById("jobArrow");
+
+            submenu.classList.toggle("show");
+
+            arrow.classList.toggle("rotate");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
